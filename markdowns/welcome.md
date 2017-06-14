@@ -8,7 +8,7 @@ This Python template lets you get started quickly with a simple working example.
 
 # Hands-on Demo
 
-@[Luke, how many stars are there in these galaxies?]({"stubs": ["universe.py"], "command": "python3 test_universe.py"})
+@[Luke, how many stars are there in these galaxies?]({"stubs": ["create_graph.py"], "command": "python3 test_create_graph.py"})
 
 Check out the markdown file [`welcome.md`](https://github.com/CodinGame/python-template/blob/master/markdowns/welcome.md) to see how this exercise is injected into the template.
 

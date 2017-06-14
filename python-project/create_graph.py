@@ -1,21 +1,22 @@
-#!/usr/bin/python3
-
-class Edge:
+class Vertex:
     def __init__(self, name):
         self.name= name
         self.successors= []
         self.distance_to_source= None
 
     def add_succ(self, successor, distance):
-        self.successors.append([successor, distance])
+        self.successors.append((successor, distance))   # tuple (immutable)
 
+    '''
     def printNeighbours(self):
         print("Neighbours of %s"%self.name)
         for s in self.successors:
             print("\t%s %d"%(s[0], s[1]))
+    '''
 
 def createGraph(vlist, elist):
-    edges= {}
+    graph= {}   # dictionnary
+    '''
     for v in vlist:
         edges[v] = Edge(v)
     for e in edges:
@@ -25,11 +26,13 @@ def createGraph(vlist, elist):
         edges[e[0]].add_succ(e[1], e[2])
         edges[e[1]].add_succ(e[0], e[2])
 
-    for e in edges:
-        edges[e].printNeighbours()
+    for v in graph:
+        graph[v].printNeighbours()
+    '''
+    return graph
 
-    return edges
 
+'''
 def main():    
     # Graph definition
     vertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
@@ -52,3 +55,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''    
