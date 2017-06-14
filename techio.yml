@@ -1,8 +1,8 @@
-title : Python
+title : Dijkstra in practice (using Python)
 
 # Table of content
 plan:
-  - title: Welcome # Set the page title
+  - title: Try it yourself # Set the page title
     statement: markdowns/welcome.md # Set the file path to the page content
 #  - title: Another Page
 #    statement: markdowns/another-page.md

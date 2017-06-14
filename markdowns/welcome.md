@@ -1,9 +1,10 @@
 # Welcome!
 
+You have probably heard once in your life the name of Dijkstra. This is an algorithm used to find the shortest paths between nodes -- or vertices -- in a graph. Let's get our hands dirty.
+
+
 This Python template lets you get started quickly with a simple working example. If it is your first contribution then you should have a look at the [Getting Started](https://tech.io/doc/getting-started-create-playground) document.
 
-
-The source code is on [GitHub](https://github.com/CodinGame/python-template), please feel free to come up with proposals to improve it.
 
 # Hands-on Demo
 
@@ -28,3 +29,5 @@ This *mandatory* file describes both the table of content and the programming pr
 # Visual and Interactive Content
 
 Tech.io provides all the tools to embed visual and interactive content like a Web app or a Unix terminal within your contribution. Please refer to the [documentation](https://tech.io/doc) to learn more about the viewer integrations.
+
+We hope you've enjoyed discovering or rediscovering the Dijkstra algorithm. The source code of this hands-on on [GitHub](https://github.com/2StepsFr0mHell/Dijkstra-hands-on), please feel free to come up with proposals to improve it.	
