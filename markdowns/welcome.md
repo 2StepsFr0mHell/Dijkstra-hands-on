@@ -8,6 +8,7 @@ You have probably heard once in your life the name of Dijkstra. This is an algor
 So you're given what we call a graph with the list of its nodes and its edges. What is easier to work with is actually a list of nodes and for each node a list of "neighbors" or "successors".
 
 @[Convert data into useful objects]({"stubs": ["create_graph.py"], "command": "python3 test_create_graph.py"})
+@[Test unittest: create_graph]({"stubs":["create_graph.py"], "command":"test_create_graph.TestCreate_graph.test_create_graph_all_vertices"})
 
 # Exploring the graph
 

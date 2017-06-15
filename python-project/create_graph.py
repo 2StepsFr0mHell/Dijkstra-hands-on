@@ -8,7 +8,7 @@ class Vertex:
         self.successors.append((successor, distance))   # tuple (immutable)
 
 
-def createGraph(vlist, elist):
+def create_graph(vlist, elist):
     graph= {}   # dictionnary
     # @TODO
     return graph
