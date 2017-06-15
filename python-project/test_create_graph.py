@@ -60,7 +60,7 @@ class TestCreate_graph(TestCase):
         #self.vertices.remove('Z')
 
     def test_create_graph_all_vertices(self):
-        print("Test vertices names")
+        #print("Test vertices names")
         # retrieve all names
         if not self.graph_to_check:
             self.fail()
@@ -78,7 +78,7 @@ class TestCreate_graph(TestCase):
             for node in self.correct_graph.values():
                 msg, result = self.is_equal(node, self.graph_to_check[node.name])
                 print(msg)
-                assertTrue(result)
+                self.assertTrue(result)
             self.success()
         except AssertionError as e:
             self.fail()

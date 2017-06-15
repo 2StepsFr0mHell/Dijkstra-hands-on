@@ -1,7 +1,5 @@
-import heapq
-import create_graph
 
-def find_shortest_path(graph, source):
+def find_shortest_path_to(graph, source, target_name):
     graph[source].distance_to_source = 0
 
     unvisited_queue = [(graph[v].distance_to_source, v) for v in graph]
@@ -10,22 +8,19 @@ def find_shortest_path(graph, source):
     while unvisited_queue:
         count_visited += 1
         u = heapq.heappop(unvisited_queue)
+        if DEBUG: print(u)
         current = graph[u[1]]
+        if DEBUG: current.print_neighbours()
         current.visited = True
 
         for v in current.neighbours:
-            # get neighbour object
-            # next=
-            # if it has already been visited, continue
-
-            # compute distance to source (don't forgate to add distance from current node to next)
-            # new_dist=
-            # if this distance is better, then update next: distance and prev
-            #if new_dist < next.distance_to_source:
-            #    next.distance_to_source = 
-            #    next.prev = 
-            '''
             next = graph[v[0]]
+            # check if this vertex is the target, exit is so
+            '''
+            if next.name == target_name:
+                print("Visited : %d" % count_visited)
+                return
+            '''                
             if next.visited:
                 continue
             new_dist = current.distance_to_source + v[1]
@@ -33,7 +28,6 @@ def find_shortest_path(graph, source):
             if new_dist < next.distance_to_source:
                 next.distance_to_source = new_dist
                 next.prev = current
-            '''
         # Rebuild heap
         # 1. Pop every item
         while len(unvisited_queue):
