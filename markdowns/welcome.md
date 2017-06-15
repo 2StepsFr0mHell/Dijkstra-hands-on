@@ -35,17 +35,21 @@ The principle of the algorithm is to divide the graph into two list of nodes:
 - on one side, the list of nodes for which now the actual shortest distance from the source, which we usually call "visited nodes". At the beginning, this list is empty.
 - on the other side, the list of nodes for which we don't know the shortest distance from the source, called "unvisited nodes".
 
-At each iteration of the algorithm, we'll consider a specific node from the second list: the one with the shortest distance from the source. 
-Since this node has the current shortest distance from the source among all unvisited nodes, the shortest path surely passes only through visited nodes. To ensure the shortest distance from the source to the unvisited node cannot be improved, we have to make sure that the distance of the paths from the source to unvisited nodes through visited nodes are correctly updated.
-Thus, we have to consider all unvisited neighbors of the specific node and update their distance from the source.
+At each iteration, we consider a specific node, mark it as visited and update the distance from the source to all its unvisited neighbors.
 
+@[Find the shortest path]({"stubs":["distance.py"], "command":"bash -c 'python -m unittest test_distance.TestFind_shortest_path.test_find_shortest_path 2> /dev/null'"})
+
+# Why does it work?
+
+At each iteration of the algorithm, we'll consider a specific node from the second list: the one with the shortest distance from the source. 
+Since this node has the current shortest distance from the source among all unvisited nodes, the shortest path surely passes only through visited nodes. To ensure the shortest distance from the source to the unvisited node cannot be improved, we have to make sure that the distances of each path from the source to an unvisited node through only visited nodes have been computed.
 
 To get a better understanding at it, the best is to have a look at the algorithm in action.
 
-@[Find the shortest path]({"stubs":["distance.py"], "command":"python -m unittest test_distance.TestFind_shortest_path.test_find_shortest_path 2> /dev/null"})
+*dynamic_stuff*
 
 # What's next?
 
-To be continued
+*To be continued*
 
 We hope you've enjoyed discovering or rediscovering the Dijkstra algorithm. The source code of this hands-on on [GitHub](https://github.com/2StepsFr0mHell/Dijkstra-hands-on), please feel free to come up with proposals to improve it.

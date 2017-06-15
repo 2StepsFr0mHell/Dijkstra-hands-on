@@ -2,24 +2,16 @@ import collections
 
 Neighbour = collections.namedtuple('Neighbour', 'name distance')
 
-class Vertex:
+class City:
     def __init__(self, name):
         self.name = name
-        self.neighbours = []
+        self.neighbors = []
 
-    def add_neighbour(self, neighbour, distance):
-        self.neighbours.append(Neighbour(name= neighbour, distance= distance))  # tuple (immutable)
-
+    def add_neighbor(self, name, distance):
+        self.neighbors.append(Neighbor(name= name, distance= distance)) 
 
 def create_graph(vlist, elist):
-    graph = {}  # dictionnary of vertices where name is the key
-    '''
-    for v in vlist:
-        graph[v] = Vertex(v)
-
-    for e in elist:
-        graph[e[0]].add_neighbour(e[1], e[2])
-        graph[e[1]].add_neighbour(e[0], e[2])
-    '''
+    graph = {}  # dictionnary of cities where name is the key
+    # @TODO
     return graph
 
