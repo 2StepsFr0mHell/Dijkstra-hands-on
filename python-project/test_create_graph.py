@@ -3,6 +3,17 @@ import create_graph as cg
 
 
 class TestCreate_graph(TestCase):
+    def send_msg(self, channel, msg):
+        print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
+
+
+    def success(self):
+        print("TECHIO> success true")
+
+
+    def fail(self):
+        print("TECHIO> success false")
+
     def create_graph(self):
         graph = {}
         for v in self.vertices:
@@ -51,10 +62,29 @@ class TestCreate_graph(TestCase):
     def test_create_graph_all_vertices(self):
         print("Test vertices names")
         # retrieve all names
-        for node in self.correct_graph.values():
-            msg, result = self.is_equal(node, self.graph_to_check[node.name])
-            assertTrue(result)
-        #names = list(self.graph_to_check)
+        if not self.graph_to_check:
+            self.fail()
+            self.send_msg("Oops! ", "Seems the graph is not initialized at all")
+            return
+        try:   
+            for key in self.correct_graph:
+                print(key)
+                self.assertIn(key, self.graph_to_check.keys())
+        except AssertionError as e:
+            self.fail()
+            self.send_msg("Oops! ", e)
+            return
+        try:
+            for node in self.correct_graph.values():
+                msg, result = self.is_equal(node, self.graph_to_check[node.name])
+                print(msg)
+                assertTrue(result)
+            self.success()
+        except AssertionError as e:
+            self.fail()
+            self.send_msg("Oops! ", e)
+            
+        #names = list(self.graph_to_check)  
         # compare length
         #self.assertEqual(len(names), len(self.vertices))
         # compare values
