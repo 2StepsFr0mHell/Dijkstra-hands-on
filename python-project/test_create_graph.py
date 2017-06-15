@@ -64,12 +64,12 @@ class TestCreate_graph(TestCase):
         # retrieve all names
         if not self.graph_to_check:
             self.fail()
-            self.send_msg("Oops! ", "Seems the graph is not initialized at all")
+            self.send_msg("Oops! ", "It seems the graph is not initialized at all")
             return
         try:   
             for key in self.correct_graph:
                 print(key)
-                self.assertIn(key, self.graph_to_check.keys())
+                self.assertIn(key, self.graph_to_check.keys(), "It seems the graph does not contain all nodes")
         except AssertionError as e:
             self.fail()
             self.send_msg("Oops! ", e)
@@ -78,7 +78,7 @@ class TestCreate_graph(TestCase):
             for node in self.correct_graph.values():
                 msg, result = self.is_equal(node, self.graph_to_check[node.name])
                 print(msg)
-                self.assertTrue(result)
+                self.assertTrue(result, "One node has a wrong neighbor")
             self.success()
         except AssertionError as e:
             self.fail()
