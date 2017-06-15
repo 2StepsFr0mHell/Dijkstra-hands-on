@@ -12,7 +12,7 @@ def success():
 def fail():
     print("TECHIO> success false")
 
-def create_graph(self):
+def create_graph():
     graph = {}
     for v in self.vertices:
         graph[v] = cg.Vertex(v)
@@ -23,7 +23,7 @@ def create_graph(self):
 
     return graph
 
-def is_equal(self, v1, vuser):
+def is_equal(v1, vuser):
     if v1.name != vuser.name:
         return "Name differs", False
     set_succ = set(v1.successors)
@@ -36,7 +36,7 @@ def is_equal(self, v1, vuser):
     return "Perfect", True
 
 
-def setUp(self):
+def setUp():
     self.vertices = {'A', 'B', 'C', 'D', 'E', 'F', 'G'}
     # Attention : undirected graph
     self.edges = [['A', 'B', 5],
@@ -57,7 +57,7 @@ def setUp(self):
     self.graph_to_check = cg.create_graph(self.vertices, self.edges)
     #self.vertices.remove('Z')
 
-def test_create_graph_all_vertices(self):
+def test_create_graph_all_vertices():
     print("Test vertices names")
     try:
         # retrieve all names
@@ -74,7 +74,7 @@ def test_create_graph_all_vertices(self):
         fail()
         send_msg("Oops! 🐞", e)
 
-def test_create_graph_all_successors(self):
+def test_create_graph_all_successors():
     print("Test successors")
     #for v in
     #msg, result = self.is_equal(self.graph, self.graph_to_check)
