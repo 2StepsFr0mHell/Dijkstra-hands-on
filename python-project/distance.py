@@ -10,29 +10,27 @@ def find_shortest_path(graph, source):
     while unvisited_queue:
         count_visited += 1
         u = heapq.heappop(unvisited_queue)
-        current = graph[u[1]]
-        current.visited = True
+        current_city = graph[u[1]]
+        current_city.visited = True
 
-        for v in current.neighbours:
-            # get neighbour object
-            # next=
-            # if it has already been visited, continue
+        for city_name in current_city.neighbours:
+            # get neighbor object which hasn't been visited yet
+            # neighbor_city =
 
-            # compute distance to source (don't forgate to add distance from current node to next)
+            # compute distance to source
             # new_dist=
-            # if this distance is better, then update next: distance and prev
-            #if new_dist < next.distance_to_source:
-            #    next.distance_to_source = 
-            #    next.prev = 
-            '''
-            next = graph[v[0]]
-            if next.visited:
-                continue
-            new_dist = current.distance_to_source + v[1]
 
-            if new_dist < next.distance_to_source:
-                next.distance_to_source = new_dist
-                next.prev = current
+            # if this distance is better, then update next: distance and prev
+
+            '''
+            neighbor_city = graph[city_name]
+            if neighbor_city.visited:
+                continue
+            new_dist = current_city.distance_to_source + neighbor_city.distance
+
+            if new_dist < neighbor_city.distance_to_source:
+                neighbor_city.distance_to_source = new_dist
+                neighbor_city.prev = current_city
             '''
         # Rebuild heap
         # 1. Pop every item
