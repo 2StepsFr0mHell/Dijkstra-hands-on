@@ -41,7 +41,7 @@ At each iteration, we consider a specific node, mark it as visited and update th
 
 @[Find the shortest path]({"stubs":["distance.py"], "command":"bash -c 'python -m unittest test_distance.TestFind_shortest_path.test_find_shortest_path 2> /dev/null'"})
 
-!(../pics/mapFinalPath.png)
+![](../pics/mapFinalPath.png)
 
 # Why does it work?
 

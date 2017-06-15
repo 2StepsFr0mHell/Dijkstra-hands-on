@@ -1,6 +1,6 @@
 import collections
 
-Neighbour = collections.namedtuple('Neighbour', 'name distance')
+Neighbor = collections.namedtuple('Neighbor', 'name distance')
 
 class City:
     def __init__(self, name):
