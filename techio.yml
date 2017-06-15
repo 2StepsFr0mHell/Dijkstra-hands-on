@@ -15,4 +15,4 @@ projects:
 
     # Set the docker image. This image runs tests using this syntax:
     # @[Code Editor Title]({"stubs": ["editor_file1.py", "editor_file2.py", ...], "command": "python3 test_file.py"})
-    runner: python:3
+    runner: techio/python3-unittest-runner:1.1.0-python-3.6
