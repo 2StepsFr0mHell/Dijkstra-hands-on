@@ -1,10 +1,14 @@
+import collections
+
+Neighbour = collections.namedtuple('Neighbour', 'name distance')
+
 class Vertex:
     def __init__(self, name):
         self.name = name
         self.neighbours = []
 
     def add_neighbour(self, neighbour, distance):
-        self.neighbours.append((neighbour, distance))  # tuple (immutable)
+        self.neighbours.append(Neighbour(name= neighbour, distance= distance))  # tuple (immutable)
 
 
 def create_graph(vlist, elist):
