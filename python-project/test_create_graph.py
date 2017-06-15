@@ -5,7 +5,7 @@ import create_graph as cg
 class TestCreate_graph(TestCase):
 
     def send_msg(channel, msg):
-    print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
+        print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
 
 
     def success():
