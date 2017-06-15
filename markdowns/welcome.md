@@ -33,11 +33,11 @@ City {
 
 The principle of the algorithm is to explore the graph, node by node, and compute minimal distances from the source (here Salt Lake City). At the beginning of the algorithm, we don't know any minimal distance from the source, but for the source itself (0). We'll thus add a ```distance_to_source``` to the ```City``` object.
 
-@[Find the shortest path]({"stubs":["distance.py"], "command":"python -m unittest test_find_shortest_path.TestFind_shortest_path.test_create_graph_all_vertices 2> /dev/null"})
+@[Find the shortest path]({"stubs":["distance.py"], "command":"python -m unittest test_distance.TestFind_shortest_path.test_find_shortest_path 2> /dev/null"})
 
 # Finding the shortest path
 
-@[Keep the shortest path]({"stubs": ["distance.py"], "command": "python3 test_distance.py"})
+@[Find the shortest path]({"stubs":["distance_fast.py"], "command":"python -m unittest test_distance_fast.TestFind_shortest_path.test_find_shortest_path_fast 2> /dev/null"})
 
 # The whole Dijkstra Algorithm
 
