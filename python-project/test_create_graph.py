@@ -3,6 +3,18 @@ import create_graph as cg
 
 
 class TestCreate_graph(TestCase):
+
+    def send_msg(channel, msg):
+    print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
+
+
+    def success():
+        print("TECHIO> success true")
+
+
+    def fail():
+        print("TECHIO> success false")
+
     def create_graph(self):
         graph = {}
         for v in self.vertices:
@@ -50,14 +62,20 @@ class TestCreate_graph(TestCase):
 
     def test_create_graph_all_vertices(self):
         print("Test vertices names")
-        # retrieve all names
-        names = list(self.graph_to_check)
-        # compare length
-        self.assertEqual(len(names), len(self.vertices))
-        # compare values
-        names = set(names)
-        for n in names:
-            self.assertIn(n, self.vertices)
+        try:
+            # retrieve all names
+            names = list(self.graph_to_check)
+            # compare length
+            self.assertEqual(len(names), len(self.vertices))
+            # compare values
+            names = set(names)
+            for n in names:
+                self.assertIn(n, self.vertices)
+            success()
+
+        except AssertionError as e:
+            fail()
+            send_msg("Oops! 🐞", e)
 
     def test_create_graph_all_successors(self):
         print("Test successors")
