@@ -20,21 +20,21 @@ class TestCreate_graph(TestCase):
             graph[v] = cg.Vertex(v)
 
         for e in self.edges:
-            graph[e[0]].add_succ(e[1], e[2])
-            graph[e[1]].add_succ(e[0], e[2])
+            graph[e[0]].add_neighbour(e[1], e[2])
+            graph[e[1]].add_neighbour(e[0], e[2])
 
         return graph
 
     def is_equal(self, v1, vuser):
         if v1.name != vuser.name:
             return "Name differs", False
-        set_succ = set(v1.successors)
-        set_user_succ = set(vuser.successors)
+        set_succ = set(v1.neighbours)
+        set_user_succ = set(vuser.neighbours)
         if len(set_succ) != len(set_user_succ):
-            return "Different number of successors", False
+            return "Different number of neighbours", False
         for s in set_user_succ:
             if s not in set_succ:
-                return "Different successors", False
+                return "Different neighbours", False
         return "Perfect", True
 
 
