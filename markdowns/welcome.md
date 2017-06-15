@@ -27,7 +27,7 @@ City {
 				(Rock Springs, 213)]
 }
 
-@[Convert data into Nodes]({"stubs":["create_graph.py"], "command":"python -m unittest test_create_graph.TestCreate_graph.test_create_graph_all_vertices 2> /dev/null"})
+@[Convert data into Nodes]({"stubs":["create_graph.py"], "command":"bash -c 'python -m unittest test_create_graph.TestCreate_graph.test_create_graph_all_vertices 2> /dev/null'"})
 
 # Exploring the graph
 
