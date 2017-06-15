@@ -9,5 +9,12 @@ class Vertex:
 
 def create_graph(vlist, elist):
     graph = {}  # dictionnary of vertices where name is the key
+    '''
+    for v in vlist:
+        graph[v] = Vertex(v)
 
+    for e in elist:
+        graph[e[0]].add_neighbour(e[1], e[2])
+        graph[e[1]].add_neighbour(e[0], e[2])
+    '''
     return graph
