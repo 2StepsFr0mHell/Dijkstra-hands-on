@@ -1,6 +1,6 @@
 from unittest import TestCase
 import sys
-import dijkstra as di
+import distance as di
 import heapq
 import collections
 
