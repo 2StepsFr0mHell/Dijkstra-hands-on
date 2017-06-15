@@ -17,21 +17,11 @@ def find_shortest_path(graph, source):
             # get neighbor object which hasn't been visited yet
             # neighbor_city =
 
-            # compute distance to source
+            # compute distance from source
             # new_dist=
 
-            # if this distance is better, then update next: distance and prev
+            # if this distance is better than the current distance to source, then update neighbor_city
 
-            '''
-            neighbor_city = graph[city_name]
-            if neighbor_city.visited:
-                continue
-            new_dist = current_city.distance_to_source + neighbor_city.distance
-
-            if new_dist < neighbor_city.distance_to_source:
-                neighbor_city.distance_to_source = new_dist
-                neighbor_city.prev = current_city
-            '''
         # Rebuild heap
         # 1. Pop every item
         while len(unvisited_queue):

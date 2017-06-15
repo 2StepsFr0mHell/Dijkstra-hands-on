@@ -6,6 +6,8 @@ In this exercise, you'll understand how the algorithm of Djikstra works. You wil
 
 You're in Salt Lake City and you want to go to Denver urgently. Unfortunately, you down know the shortest way to get there and you don't own a map. The only information you have is a list of distances by road between cities. How do you find the shortest route from Salt Lake City to Denver? 
 
+![](../pics/mapFinal.png)
+
 ### Analyzing the problem
 
 The data you have actually correspond to what is called a graph:
@@ -38,6 +40,8 @@ The principle of the algorithm is to divide the graph into two list of nodes:
 At each iteration, we consider a specific node, mark it as visited and update the distance from the source to all its unvisited neighbors.
 
 @[Find the shortest path]({"stubs":["distance.py"], "command":"bash -c 'python -m unittest test_distance.TestFind_shortest_path.test_find_shortest_path 2> /dev/null'"})
+
+!(../pics/mapFinalPath.png)
 
 # Why does it work?
 
