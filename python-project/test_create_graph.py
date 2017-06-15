@@ -1,8 +1,5 @@
-from unittest import TestCase
 import create_graph as cg
 
-
-class TestCreate_graph(TestCase):
 
     def send_msg(channel, msg):
         print("TECHIO> message --channel \"{}\" \"{}\"".format(channel, msg))
@@ -87,3 +84,7 @@ class TestCreate_graph(TestCase):
         # check that its successors are correct : name and distance
         # self.assertEqual(uppercase.to_upper('foo'), 'FOO', "Wrong uppercase value for foo")
         # self.assertEqual(uppercase.to_upper('Bar'), 'BAR')
+
+if __name__ == "__main__":
+    setUp()
+    test_create_graph_all_vertices()
