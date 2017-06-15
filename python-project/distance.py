@@ -8,7 +8,6 @@ def find_shortest_path(graph, source):
     heapq.heapify(unvisited_queue)
 
     while unvisited_queue:
-        count_visited += 1
         u = heapq.heappop(unvisited_queue)
         current_city = graph[u[1]]
         current_city.visited = True
@@ -16,7 +15,7 @@ def find_shortest_path(graph, source):
         for city_name in current_city.neighbours:
             # @TODO
             # get neighbor object which hasn't been visited yet
-            # neighbor_city =
+            neighbor_city = None 
 
             # compute distance from source
             # new_dist=
